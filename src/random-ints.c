@@ -12,9 +12,9 @@ int main(int argc, char *argv[]) {
    int len = atoi(argv[1]);
    int i, numbers[len];
 
-   // make a random array of numbers of size argv[1]
    // have to have a seed for srand() or rand() will print the same numbers every time
    srand(time(0));
+   // make a random array of numbers of size argv[1]
    for (i = 0; i < len; ++i) {
       numbers[i] = rand();
    }

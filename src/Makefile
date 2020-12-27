@@ -6,4 +6,7 @@ random-ints: random-ints.c
 	mv random-ints ../bin/random-ints
 
 test: ../bin/random-ints
-	../bin/random-ints 5 partial
+	../bin/random-ints 10 random
+	../bin/random-ints 10 partial
+	../bin/random-ints 10 reverse
+	../bin/random-ints 10 sorted
