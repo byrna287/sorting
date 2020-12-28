@@ -16,9 +16,10 @@ int main(int argc, char *argv[]) {
    selection_sort(nums, len);
    
    for (i = 0; i < len; ++i) {
-      printf("%d ", nums[i]);
+      printf("%d\n", nums[i]); // might get rid of print once actually testing
    }
    free(nums);
+   return 0;
 }
 
 void selection_sort(int nums[], int len) {

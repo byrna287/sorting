@@ -42,6 +42,7 @@ int main(int argc, char *argv[]) {
       qsort (numbers, len, sizeof (int), compare_ints_asc);
       print_nums(numbers, len);
    }
+   return 0;
 
 }
 
