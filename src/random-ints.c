@@ -25,19 +25,20 @@ int main(int argc, char *argv[]) {
    }
    
    // partially sorted
-   if (strcmp(argv[2], "partial") == 0) {
+   else if (strcmp(argv[2], "partial") == 0) {
+      // sorts the first half of the numbers
       qsort (numbers, len / 2, sizeof (int), compare_ints_asc);
       print_nums(numbers, len);
    }
    
    // reverse sorted
-   if (strcmp(argv[2], "reverse") == 0) {
+   else if (strcmp(argv[2], "reverse") == 0) {
       qsort (numbers, len, sizeof (int), compare_ints_desc);
       print_nums(numbers, len);
    }
    
    // sorted
-   if (strcmp(argv[2], "sorted") == 0) {
+   else if (strcmp(argv[2], "sorted") == 0) {
       qsort (numbers, len, sizeof (int), compare_ints_asc);
       print_nums(numbers, len);
    }
@@ -69,8 +70,3 @@ void print_nums(int numbers[], int len) {
    printf("\n");
 
 }
-
-/* going to have if statements for argv[2] for random, partially sorted,
-reverse sorted, sorted and can pipe them to different files for testing
-pipe the datasets to files after
-when adding the results to file have first in line be ints=(intcount) */
