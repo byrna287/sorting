@@ -7,10 +7,12 @@ void heap_sort(int nums[], int len);
 
 int main(int argc, char *argv[]) {
 
+   // length of array is first command line argument
    int len = atoi(argv[1]);
    int *nums = malloc(len * sizeof(int));
    int i;
 
+   // reading in the numbers and adding them to array
    for (i = 0; i < len; ++i) {
       scanf("%d", &nums[i]);
    }
@@ -20,13 +22,13 @@ int main(int argc, char *argv[]) {
    for (i = 0; i < len; ++i) {
       printf("%d\n", nums[i]);
    }
-   printf("\n");
 
    free(nums);
    return 0;
 }
 
 void make_max_heap(int nums[], int len, int i) {
+   // in max heap parent node is always bigger than child node
 
    int largest = i, temp;
    int left = 2 * i + 1; // left child
