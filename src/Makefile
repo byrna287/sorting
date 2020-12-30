@@ -1,5 +1,5 @@
 # to compile all the c files
-all: random_ints sel_sort heap_sort
+all: random_ints sel_sort heap_sort radix_sort
 
 # to compile random_ints
 random_ints: random_ints.c
@@ -16,13 +16,22 @@ heap_sort: heap_sort.c
 	gcc -o heap_sort heap_sort.c
 	mv heap_sort ../bin/heap_sort
 
+#to compile radix_sort
+radix_sort: radix_sort.c
+	gcc -o radix_sort radix_sort.c
+	mv radix_sort ../bin/radix_sort
+
 #to test selection_sort
 sel_sort_test: ../bin/sel_sort
-	../bin/sel_sort 1000 < ../test/random/1000_ints
+	../bin/sel_sort 10 < ../test/random/10_ints
 
 #to test heap_sort
 heap_sort_test: ../bin/heap_sort
-	../bin/heap_sort 10
+	../bin/heap_sort 10 < ../test/sorted/10_ints
+
+#to test radix_sort
+radix_sort_test: ../bin/radix_sort
+	../bin/radix_sort 5000000 < ../test/random/5000000_ints
 
 #to genereate that amount of ints: these use the same numbers but in different order
 #ten
