@@ -21,6 +21,7 @@ radix_sort: radix_sort.c
 	gcc -o radix_sort radix_sort.c
 	mv radix_sort ../bin/radix_sort
 
+#test cases: can edit these as you go
 #to test selection_sort
 sel_sort_test: ../bin/sel_sort
 	../bin/sel_sort 10 < ../test/random/10_ints

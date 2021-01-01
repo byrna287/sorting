@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-// NOT WORKING WITH PIPING DATA IN (THE NUMBERS ARE TOO BIG??)
+// WASN'T WORKING WITH PIPING DATA IN (THE NUMBERS WERE TOO BIG??)
 
 int max(int nums[], int len);
 void counting_sort(int nums[], int len, int dig);
