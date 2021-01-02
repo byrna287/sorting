@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 void selection_sort(int nums[], int len);
 
@@ -15,12 +16,23 @@ int main(int argc, char *argv[]) {
       scanf("%d", &nums[i]);
    }
 
+   // to time selection_sort
+   clock_t start = clock();
+   
    selection_sort(nums, len);
    
-   for (i = 0; i < len; ++i) {
-      printf("%d\n", nums[i]); // might get rid of print once actually testing
+   clock_t end = clock();
+   // CLOCKS_PER_SEC changes the time from "clocks" to seconds
+   double time = (double)(end - start) / CLOCKS_PER_SEC; 
+
+   /*for (i = 0; i < len; ++i) {
+      printf("%d ", nums[i]);
    }
+   printf("\n");*/
+   
+   printf("%d ints - time taken: %f\n", len, time);
    free(nums);
+   
    return 0;
 }
 
@@ -38,7 +50,7 @@ void selection_sort(int nums[], int len) {
             smallest_ind = j;
          }
       }
-      // swap i and smallest number
+      // swap i (first of unsorted) and smallest number
       temp = nums[smallest_ind];
       nums[smallest_ind] = nums[i];
       nums[i] = temp;

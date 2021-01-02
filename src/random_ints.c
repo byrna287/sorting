@@ -10,21 +10,26 @@ void print_nums(int numbers[], int len);
 int main(int argc, char *argv[]) {
 
    int len = atoi(argv[1]);
-   int i, numbers[len];
+   int i, *numbers = malloc(len * sizeof(int));
 
    // have to have a seed for srand() or rand() will print the same numbers every time
    srand(time(0));
    // make a random array of numbers of size argv[1]
-   // these numbers go from 0-999
+   // these numbers go from -9999 to 99999
    for (i = 0; i < len; ++i) {
-      if (i % 3 == 0)
-         numbers[i] = rand() % 100;
-      else if (i % 2 == 0)
+      if (i % 7 == 0)
+         numbers[i] = rand() % 100000;
+      else if (i % 5 == 0)
          numbers[i] = rand() % 1000;
-      else
+      else if (i % 3 == 0)
+         numbers[i] = rand() % 100 * -1;
+      else if (i % 2 == 0)
          numbers[i] = rand() % 10;
+      else
+         numbers[i] = rand() % 10000 * -1;
    }
 
+   //argv[2] determines what order the numbers will be in
    // random
    if (strcmp(argv[2], "random") == 0) {
       print_nums(numbers, len);
@@ -48,10 +53,11 @@ int main(int argc, char *argv[]) {
       qsort (numbers, len, sizeof (int), compare_ints_asc);
       print_nums(numbers, len);
    }
+
+   free(numbers);
    return 0;
 
 }
-
 int compare_ints_asc(const void *a, const void *b) {
 
    const int *da = (const int *) a;

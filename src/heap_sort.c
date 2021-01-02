@@ -4,6 +4,7 @@
 
 void make_max_heap(int nums[], int len, int i);
 void heap_sort(int nums[], int len);
+void swap(int *num1, int *num2);
 
 int main(int argc, char *argv[]) {
 
@@ -27,6 +28,14 @@ int main(int argc, char *argv[]) {
    return 0;
 }
 
+void swap(int *num1, int *num2) {
+
+   int temp;
+   temp = *num1;
+   *num1 = *num2;
+   *num2 = temp;
+}
+
 void make_max_heap(int nums[], int len, int i) {
    // in max heap parent node is always bigger than child node
 
@@ -44,9 +53,7 @@ void make_max_heap(int nums[], int len, int i) {
    }
    // if the largest isn't the root swap so it is
    if (largest != i) {
-      temp = nums[i];
-      nums[i] = nums[largest];
-      nums[largest] = temp;
+      swap(&nums[i], &nums[largest]);
 
       // have to go again because the root changed
       make_max_heap(nums, len, largest);
@@ -64,9 +71,7 @@ void heap_sort(int nums[], int len) {
 
    // have to swap first and last because first is largest
    for (i = len - 1; i >= 0; --i) {
-      temp = nums[i];
-      nums[i] = nums[0];
-      nums[0] = temp;
+      swap(&nums[i], &nums[0]);
       // makes max heap on remaining numbers (without the last number)
       make_max_heap(nums, i, 0);
    }
