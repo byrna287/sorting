@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 void make_max_heap(int nums[], int len, int i);
 void heap_sort(int nums[], int len);
@@ -18,13 +19,22 @@ int main(int argc, char *argv[]) {
       scanf("%d", &nums[i]);
    }
 
+   // time how long heap sort takes
+   clock_t start = clock();
+
    heap_sort(nums, len);
 
-   for (i = 0; i < len; ++i) {
-      printf("%d\n", nums[i]);
-   }
+   clock_t end = clock();
+   // divide by CLOCKS_PER_SEC to get the time in seconds
+   double time = (double)(end - start) / CLOCKS_PER_SEC;
 
+   /*for (i = 0; i < len; ++i) {
+      printf("%d\n", nums[i]);
+   }*/
+
+   printf("%d ints - time taken: %f\n", len, time);
    free(nums);
+   
    return 0;
 }
 
