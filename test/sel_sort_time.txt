@@ -1,0 +1,36 @@
+
+RANDOM
+10 ints - time taken: 0.000002
+100 ints - time taken: 0.000026
+200 ints - time taken: 0.000073
+1000 ints - time taken: 0.001571
+2000 ints - time taken: 0.005697
+100000 ints - time taken: 9.037542
+200000 ints - time taken: 36.280903
+
+PARTIALLY SORTED
+10 ints - time taken: 0.000002
+100 ints - time taken: 0.000017
+200 ints - time taken: 0.000052
+1000 ints - time taken: 0.001058
+2000 ints - time taken: 0.004476
+100000 ints - time taken: 9.088518
+200000 ints - time taken: 38.022532
+
+REVERSE SORTED
+10 ints - time taken: 0.000002
+100 ints - time taken: 0.000018
+200 ints - time taken: 0.000055
+1000 ints - time taken: 0.001224
+2000 ints - time taken: 0.004767
+100000 ints - time taken: 11.137073
+200000 ints - time taken: 41.969847
+
+SORTED
+10 ints - time taken: 0.000002
+100 ints - time taken: 0.000012
+200 ints - time taken: 0.000041
+1000 ints - time taken: 0.000978
+2000 ints - time taken: 0.004305
+100000 ints - time taken: 9.991757
+200000 ints - time taken: 39.933615
