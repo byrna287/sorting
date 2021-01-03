@@ -4,26 +4,30 @@ all: random_ints sel_sort heap_sort radix_sort
 
 # to compile random_ints
 random_ints: random_ints.c
-	gcc -o random_ints random_ints.c
+	gcc -o random_ints random_ints.c small_functions.c
 	mv random_ints ../bin/random_ints
 
 #to compile selection_sort
 sel_sort: selection_sort.c
-	gcc -o sel_sort selection_sort.c
+	gcc -o sel_sort selection_sort.c small_functions.c
 	mv sel_sort ../bin/sel_sort
 
 #to compile heap_sort
 heap_sort: heap_sort.c
-	gcc -o heap_sort heap_sort.c
+	gcc -o heap_sort heap_sort.c small_functions.c
 	mv heap_sort ../bin/heap_sort
 
 #to compile radix_sort
 radix_sort: radix_sort.c
-	gcc -o radix_sort radix_sort.c
+	gcc -o radix_sort radix_sort.c small_functions.c
 	mv radix_sort ../bin/radix_sort
 
 
 #test cases: can edit these as you go for testing
+
+#to test random_ints
+random_ints_test: ../bin/random_ints
+	../bin/random_ints 10 random
 
 #to test selection_sort
 sel_sort_test: ../bin/sel_sort
@@ -31,16 +35,16 @@ sel_sort_test: ../bin/sel_sort
 
 #to test heap_sort
 heap_sort_test: ../bin/heap_sort
-	../bin/heap_sort 100000 < ../test/random/100000_ints
+	../bin/heap_sort 10 < ../test/random/10_ints
 
 #to test radix_sort
 radix_sort_test: ../bin/radix_sort
-	../bin/radix_sort 5000000 < ../test/random/5000000_ints
+	../bin/radix_sort 10 < ../test/partial/10_ints
 
 
 #to genereate that amount of ints: these use the same numbers but in different order
 
-nums: 10_ints 100_ints 200_ints 1000_ints 2000_ints 100000_ints 1000000_ints 2000000_ints 5000000_ints
+nums: 10_ints 100_ints 200_ints 1000_ints 2000_ints 100000_ints 200000_ints 1000000_ints 2000000_ints 5000000_ints
 
 #ten
 10_ints: ../bin/random_ints
