@@ -3,9 +3,10 @@
 #include <math.h>
 #include <time.h>
 
+#include "small_func.h"
+
 void make_max_heap(int nums[], int len, int i);
 void heap_sort(int nums[], int len);
-void swap(int *num1, int *num2);
 
 int main(int argc, char *argv[]) {
 
@@ -28,22 +29,12 @@ int main(int argc, char *argv[]) {
    // divide by CLOCKS_PER_SEC to get the time in seconds
    double time = (double)(end - start) / CLOCKS_PER_SEC;
 
-   /*for (i = 0; i < len; ++i) {
-      printf("%d\n", nums[i]);
-   }*/
+   //print_nums(nums, len);
 
    printf("%d ints - time taken: %f\n", len, time);
    free(nums);
    
    return 0;
-}
-
-void swap(int *num1, int *num2) {
-
-   int temp;
-   temp = *num1;
-   *num1 = *num2;
-   *num2 = temp;
 }
 
 void make_max_heap(int nums[], int len, int i) {

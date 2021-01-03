@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-// WASN'T WORKING WITH PIPING DATA IN (THE NUMBERS WERE TOO BIG??)
+// WASN'T WORKING WITH PIPING DATA IN (THE NUMBERS WERE TOO BIG?? AND DOESN'T SORT NEGATIVE NUMBERS)
+#include "small_func.h"
 
-int max(int nums[], int len);
 void counting_sort(int nums[], int len, int dig);
 void radix_sort(int nums[], int len);
 
@@ -22,24 +22,11 @@ int main(int argc, char *argv[]) {
 
    radix_sort(nums, len);
 
-   for (i = 0; i < len; ++i) {
-      printf("%d\n", nums[i]);
-   }
+   print_nums(nums, len);
 
    free(nums);
    return 0;
 
-}
-// get largest number in array
-int max(int nums[], int len) {
-
-   int i, largest = 0;
-   for (i = 1; i < len; ++i) {
-      if (nums[i] > nums[largest]) {
-         largest = i;
-      }
-   }
-   return nums[largest];
 }
 
 void counting_sort(int nums[], int len, int dig) {

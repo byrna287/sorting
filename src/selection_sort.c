@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "small_func.h"
+
 void selection_sort(int nums[], int len);
 
 int main(int argc, char *argv[]) {
@@ -25,10 +27,7 @@ int main(int argc, char *argv[]) {
    // CLOCKS_PER_SEC changes the time from "clocks" to seconds
    double time = (double)(end - start) / CLOCKS_PER_SEC; 
 
-   /*for (i = 0; i < len; ++i) {
-      printf("%d ", nums[i]);
-   }
-   printf("\n");*/
+   //print_nums(nums, len);
    
    printf("%d ints - time taken: %f\n", len, time);
    free(nums);
@@ -51,8 +50,6 @@ void selection_sort(int nums[], int len) {
          }
       }
       // swap i (first of unsorted) and smallest number
-      temp = nums[smallest_ind];
-      nums[smallest_ind] = nums[i];
-      nums[i] = temp;
+      swap(&nums[i], &nums[smallest_ind]);
    }
 }
