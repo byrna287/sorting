@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <time.h>
+#include <math.h>
 
 #include "small_func.h"
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
    //print_nums(nums, len);
 
-   printf("%d ints - time taken: %f\n", len, time);
+   printf("%d ints - time taken: %f seconds\n", len, time);
    free(nums);
    
    return 0;

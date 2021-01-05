@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 // WASN'T WORKING WITH PIPING DATA IN (THE NUMBERS WERE TOO BIG?? AND DOESN'T SORT NEGATIVE NUMBERS)
 #include "small_func.h"
@@ -20,11 +21,20 @@ int main(int argc, char *argv[]) {
       scanf("%d", &nums[i]);
    }
 
+   // time how long radix sort takes
+   clock_t start = clock();
+
    radix_sort(nums, len);
 
-   print_nums(nums, len);
+   clock_t end = clock();
+   // divide by CLOCKS_PER_SEC to convert to seconds
+   double time = (double)(end - start) / CLOCKS_PER_SEC;
 
+   //print_nums(nums, len);
+
+   printf("%d ints - time taken: %f seconds\n", len, time);
    free(nums);
+   
    return 0;
 
 }
