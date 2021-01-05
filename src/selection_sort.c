@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
    //print_nums(nums, len);
    
-   printf("%d ints - time taken: %f\n", len, time);
+   printf("%d ints - time taken: %f seconds\n", len, time);
    free(nums);
    
    return 0;
@@ -49,7 +49,10 @@ void selection_sort(int nums[], int len) {
             smallest_ind = j;
          }
       }
-      // swap i (first of unsorted) and smallest number
-      swap(&nums[i], &nums[smallest_ind]);
+      // swap i (first of unsorted) and smallest number if it's not already in
+      // the right place
+      if (i != smallest_ind) {
+         swap(&nums[i], &nums[smallest_ind]);
+      }
    }
 }
