@@ -1,48 +1,163 @@
+Heap Sort
+
+DATASET 1:
 
 RANDOM
-10 ints - time taken: 0.000003
-100 ints - time taken: 0.000022
-200 ints - time taken: 0.000039
-1000 ints - time taken: 0.000233
-2000 ints - time taken: 0.000620
-100000 ints - time taken: 0.031882
-200000 ints - time taken: 0.052417
-1000000 ints - time taken: 0.290896
-2000000 ints - time taken: 0.705262
-5000000 ints - time taken: 2.217206
+
+10 ints - time taken: 0.000004 seconds
+100 ints - time taken: 0.000015 seconds
+200 ints - time taken: 0.000034 seconds
+1000 ints - time taken: 0.000192 seconds
+2000 ints - time taken: 0.000419 seconds
+100000 ints - time taken: 0.025287 seconds
+200000 ints - time taken: 0.052832 seconds
+1000000 ints - time taken: 0.307139 seconds
+2000000 ints - time taken: 0.741105 seconds
+5000000 ints - time taken: 2.416608 seconds
 
 PARTIALLY SORTED
-10 ints - time taken: 0.000004
-100 ints - time taken: 0.000014
-200 ints - time taken: 0.000029
-1000 ints - time taken: 0.000171
-2000 ints - time taken: 0.000458
-100000 ints - time taken: 0.024628
-200000 ints - time taken: 0.050857
-1000000 ints - time taken: 0.268718
-2000000 ints - time taken: 0.695259
-5000000 ints - time taken: 1.822291
+
+10 ints - time taken: 0.000004 seconds
+100 ints - time taken: 0.000014 seconds
+200 ints - time taken: 0.000031 seconds
+1000 ints - time taken: 0.000185 seconds
+2000 ints - time taken: 0.000409 seconds
+100000 ints - time taken: 0.025041 seconds
+200000 ints - time taken: 0.049676 seconds
+1000000 ints - time taken: 0.275320 seconds
+2000000 ints - time taken: 0.616293 seconds
+5000000 ints - time taken: 1.892999 seconds
 
 REVERSE SORTED
-10 ints - time taken: 0.000004
-100 ints - time taken: 0.000012
-200 ints - time taken: 0.000024
-1000 ints - time taken: 0.000145
-2000 ints - time taken: 0.000331
-100000 ints - time taken: 0.021571
-200000 ints - time taken: 0.042059
-1000000 ints - time taken: 0.233646
-2000000 ints - time taken: 0.471998
-5000000 ints - time taken: 1.302286
+
+10 ints - time taken: 0.000002 seconds
+100 ints - time taken: 0.000011 seconds
+200 ints - time taken: 0.000022 seconds
+1000 ints - time taken: 0.000139 seconds
+2000 ints - time taken: 0.000335 seconds
+100000 ints - time taken: 0.020138 seconds
+200000 ints - time taken: 0.041900 seconds
+1000000 ints - time taken: 0.238942 seconds
+2000000 ints - time taken: 0.481593 seconds
+5000000 ints - time taken: 1.284898 seconds
 
 SORTED
-10 ints - time taken: 0.000004
-100 ints - time taken: 0.000016
-200 ints - time taken: 0.000032
-1000 ints - time taken: 0.000175
-2000 ints - time taken: 0.000386
-100000 ints - time taken: 0.022326
-200000 ints - time taken: 0.041023
-1000000 ints - time taken: 0.219955
-2000000 ints - time taken: 0.455727
-5000000 ints - time taken: 1.215318
+
+10 ints - time taken: 0.000003 seconds
+100 ints - time taken: 0.000013 seconds
+200 ints - time taken: 0.000024 seconds
+1000 ints - time taken: 0.000139 seconds
+2000 ints - time taken: 0.000337 seconds
+100000 ints - time taken: 0.020991 seconds
+200000 ints - time taken: 0.045037 seconds
+1000000 ints - time taken: 0.226070 seconds
+2000000 ints - time taken: 0.468308 seconds
+5000000 ints - time taken: 1.216702 seconds
+
+DATASET 2:
+
+RANDOM
+
+10 ints - time taken: 0.000004 seconds
+100 ints - time taken: 0.000016 seconds
+200 ints - time taken: 0.000031 seconds
+1000 ints - time taken: 0.000177 seconds
+2000 ints - time taken: 0.000400 seconds
+100000 ints - time taken: 0.026728 seconds
+200000 ints - time taken: 0.057009 seconds
+1000000 ints - time taken: 0.319256 seconds
+2000000 ints - time taken: 0.725378 seconds
+5000000 ints - time taken: 2.403336 seconds
+
+PARTIALLY SORTED
+
+10 ints - time taken: 0.000004 seconds
+100 ints - time taken: 0.000014 seconds
+200 ints - time taken: 0.000033 seconds
+1000 ints - time taken: 0.000169 seconds
+2000 ints - time taken: 0.000396 seconds
+100000 ints - time taken: 0.023251 seconds
+200000 ints - time taken: 0.050348 seconds
+1000000 ints - time taken: 0.279223 seconds
+2000000 ints - time taken: 0.627117 seconds
+5000000 ints - time taken: 1.882138 seconds
+
+REVERSE SORTED
+
+10 ints - time taken: 0.000004 seconds
+100 ints - time taken: 0.000013 seconds
+200 ints - time taken: 0.000026 seconds
+1000 ints - time taken: 0.000143 seconds
+2000 ints - time taken: 0.000386 seconds
+100000 ints - time taken: 0.020532 seconds
+200000 ints - time taken: 0.043290 seconds
+1000000 ints - time taken: 0.234293 seconds
+2000000 ints - time taken: 0.486768 seconds
+5000000 ints - time taken: 1.310929 seconds
+
+SORTED
+
+10 ints - time taken: 0.000002 seconds
+100 ints - time taken: 0.000012 seconds
+200 ints - time taken: 0.000024 seconds
+1000 ints - time taken: 0.000142 seconds
+2000 ints - time taken: 0.000342 seconds
+100000 ints - time taken: 0.019869 seconds
+200000 ints - time taken: 0.042713 seconds
+1000000 ints - time taken: 0.228462 seconds
+2000000 ints - time taken: 0.470547 seconds
+5000000 ints - time taken: 1.265603 seconds
+
+DATASET 3:
+
+RANDOM
+
+10 ints - time taken: 0.000002 seconds
+100 ints - time taken: 0.000012 seconds
+200 ints - time taken: 0.000025 seconds
+1000 ints - time taken: 0.000153 seconds
+2000 ints - time taken: 0.000374 seconds
+100000 ints - time taken: 0.025882 seconds
+200000 ints - time taken: 0.061604 seconds
+1000000 ints - time taken: 0.316757 seconds
+2000000 ints - time taken: 0.735572 seconds
+5000000 ints - time taken: 2.399672 seconds
+
+PARTIALLY SORTED
+
+10 ints - time taken: 0.000002 seconds
+100 ints - time taken: 0.000012 seconds
+200 ints - time taken: 0.000026 seconds
+1000 ints - time taken: 0.000151 seconds
+2000 ints - time taken: 0.000353 seconds
+100000 ints - time taken: 0.024007 seconds
+200000 ints - time taken: 0.052165 seconds
+1000000 ints - time taken: 0.283966 seconds
+2000000 ints - time taken: 0.621387 seconds
+5000000 ints - time taken: 1.912402 seconds
+
+REVERSE SORTED
+
+10 ints - time taken: 0.000003 seconds
+100 ints - time taken: 0.000011 seconds
+200 ints - time taken: 0.000023 seconds
+1000 ints - time taken: 0.000127 seconds
+2000 ints - time taken: 0.000327 seconds
+100000 ints - time taken: 0.019430 seconds
+200000 ints - time taken: 0.043115 seconds
+1000000 ints - time taken: 0.236172 seconds
+2000000 ints - time taken: 0.498774 seconds
+5000000 ints - time taken: 1.314728 seconds
+
+SORTED
+
+10 ints - time taken: 0.000002 seconds
+100 ints - time taken: 0.000012 seconds
+200 ints - time taken: 0.000025 seconds
+1000 ints - time taken: 0.000142 seconds
+2000 ints - time taken: 0.000314 seconds
+100000 ints - time taken: 0.021090 seconds
+200000 ints - time taken: 0.044924 seconds
+1000000 ints - time taken: 0.231040 seconds
+2000000 ints - time taken: 0.477439 seconds
+5000000 ints - time taken: 1.293262 seconds
