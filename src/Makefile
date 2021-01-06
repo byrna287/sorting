@@ -22,28 +22,25 @@ radix_sort: radix_sort.c
 	gcc -o radix_sort radix_sort.c small_functions.c
 	mv radix_sort ../bin/radix_sort
 
-
 #test cases: can edit these as you go for testing
-
 #to test random_ints
 random_ints_test: ../bin/random_ints
 	../bin/random_ints 10 random
 
 #to test selection_sort
 sel_sort_test: ../bin/sel_sort
-	../bin/sel_sort 10 < ../test/random/10_ints
+	../bin/sel_sort 2000 < ../test/sorted/2000_ints
 
 #to test heap_sort
 heap_sort_test: ../bin/heap_sort
-	../bin/heap_sort 10 < ../test/random/10_ints
+	../bin/heap_sort 200000 < ../test/reverse/200000_ints
 
 #to test radix_sort
 radix_sort_test: ../bin/radix_sort
-	../bin/radix_sort 10 < ../test/partial/10_ints
+	../bin/radix_sort 1000000 < ../test/partial/1000000_ints
 
 
 #to genereate that amount of ints: these use the same numbers but in different order
-
 nums: 10_ints 100_ints 200_ints 1000_ints 2000_ints 100000_ints 200000_ints 1000000_ints 2000000_ints 5000000_ints
 
 #ten
@@ -118,9 +115,10 @@ nums: 10_ints 100_ints 200_ints 1000_ints 2000_ints 100000_ints 200000_ints 1000
 
 
 #to run the algorithms and append the results (time taken) to a file
+time_sorts: time_sel_sort time_heap_sort time_radix_sort
 
 time_sel_sort: ../bin/sel_sort
-	echo "\n"RANDOM >> ../test/sel_sort_time.txt
+	echo "\n"RANDOM"\n" >> ../test/sel_sort_time.txt
 	../bin/sel_sort 10 < ../test/random/10_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 100 < ../test/random/100_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200 < ../test/random/200_ints >> ../test/sel_sort_time.txt
@@ -129,7 +127,7 @@ time_sel_sort: ../bin/sel_sort
 	../bin/sel_sort 100000 < ../test/random/100000_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200000 < ../test/random/200000_ints >> ../test/sel_sort_time.txt
 
-	echo "\n"PARTIALLY SORTED >> ../test/sel_sort_time.txt
+	echo "\n"PARTIALLY SORTED"\n" >> ../test/sel_sort_time.txt
 	../bin/sel_sort 10 < ../test/partial/10_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 100 < ../test/partial/100_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200 < ../test/partial/200_ints >> ../test/sel_sort_time.txt
@@ -138,7 +136,7 @@ time_sel_sort: ../bin/sel_sort
 	../bin/sel_sort 100000 < ../test/partial/100000_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200000 < ../test/partial/200000_ints >> ../test/sel_sort_time.txt
 
-	echo "\n"REVERSE SORTED >> ../test/sel_sort_time.txt
+	echo "\n"REVERSE SORTED"\n" >> ../test/sel_sort_time.txt
 	../bin/sel_sort 10 < ../test/reverse/10_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 100 < ../test/reverse/100_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200 < ../test/reverse/200_ints >> ../test/sel_sort_time.txt
@@ -147,7 +145,7 @@ time_sel_sort: ../bin/sel_sort
 	../bin/sel_sort 100000 < ../test/reverse/100000_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200000 < ../test/reverse/200000_ints >> ../test/sel_sort_time.txt
 
-	echo "\n"SORTED >> ../test/sel_sort_time.txt
+	echo "\n"SORTED"\n" >> ../test/sel_sort_time.txt
 	../bin/sel_sort 10 < ../test/sorted/10_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 100 < ../test/sorted/100_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200 < ../test/sorted/200_ints >> ../test/sel_sort_time.txt
@@ -156,9 +154,8 @@ time_sel_sort: ../bin/sel_sort
 	../bin/sel_sort 100000 < ../test/sorted/100000_ints >> ../test/sel_sort_time.txt
 	../bin/sel_sort 200000 < ../test/sorted/200000_ints >> ../test/sel_sort_time.txt
 
-
 time_heap_sort: ../bin/heap_sort
-	echo "\n"RANDOM >> ../test/heap_sort_time.txt
+	echo "\n"RANDOM"\n" >> ../test/heap_sort_time.txt
 	../bin/heap_sort 10 < ../test/random/10_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 100 < ../test/random/100_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 200 < ../test/random/200_ints >> ../test/heap_sort_time.txt
@@ -170,7 +167,7 @@ time_heap_sort: ../bin/heap_sort
 	../bin/heap_sort 2000000 < ../test/random/2000000_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 5000000 < ../test/random/5000000_ints >> ../test/heap_sort_time.txt
 	
-	echo "\n"PARTIALLY SORTED >> ../test/heap_sort_time.txt
+	echo "\n"PARTIALLY SORTED"\n" >> ../test/heap_sort_time.txt
 	../bin/heap_sort 10 < ../test/partial/10_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 100 < ../test/partial/100_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 200 < ../test/partial/200_ints >> ../test/heap_sort_time.txt
@@ -182,7 +179,7 @@ time_heap_sort: ../bin/heap_sort
 	../bin/heap_sort 2000000 < ../test/partial/2000000_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 5000000 < ../test/partial/5000000_ints >> ../test/heap_sort_time.txt
 
-	echo "\n"REVERSE SORTED >> ../test/heap_sort_time.txt
+	echo "\n"REVERSE SORTED"\n" >> ../test/heap_sort_time.txt
 	../bin/heap_sort 10 < ../test/reverse/10_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 100 < ../test/reverse/100_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 200 < ../test/reverse/200_ints >> ../test/heap_sort_time.txt
@@ -194,7 +191,7 @@ time_heap_sort: ../bin/heap_sort
 	../bin/heap_sort 2000000 < ../test/reverse/2000000_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 5000000 < ../test/reverse/5000000_ints >> ../test/heap_sort_time.txt
 
-	echo "\n"SORTED >> ../test/heap_sort_time.txt
+	echo "\n"SORTED"\n" >> ../test/heap_sort_time.txt
 	../bin/heap_sort 10 < ../test/sorted/10_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 100 < ../test/sorted/100_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 200 < ../test/sorted/200_ints >> ../test/heap_sort_time.txt
@@ -205,3 +202,52 @@ time_heap_sort: ../bin/heap_sort
 	../bin/heap_sort 1000000 < ../test/sorted/1000000_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 2000000 < ../test/sorted/2000000_ints >> ../test/heap_sort_time.txt
 	../bin/heap_sort 5000000 < ../test/sorted/5000000_ints >> ../test/heap_sort_time.txt
+
+time_radix_sort: ../bin/radix_sort
+	echo "\n"RANDOM"\n" >> ../test/radix_sort_time.txt
+	../bin/radix_sort 10 < ../test/random/10_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100 < ../test/random/100_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200 < ../test/random/200_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000 < ../test/random/1000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000 < ../test/random/2000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100000 < ../test/random/100000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200000 < ../test/random/200000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000000 < ../test/random/1000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000000 < ../test/random/2000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 5000000 < ../test/random/5000000_ints >> ../test/radix_sort_time.txt
+
+	echo "\n"PARTIALLY SORTED"\n" >> ../test/radix_sort_time.txt
+	../bin/radix_sort 10 < ../test/partial/10_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100 < ../test/partial/100_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200 < ../test/partial/200_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000 < ../test/partial/1000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000 < ../test/partial/2000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100000 < ../test/partial/100000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200000 < ../test/partial/200000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000000 < ../test/partial/1000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000000 < ../test/partial/2000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 5000000 < ../test/partial/5000000_ints >> ../test/radix_sort_time.txt
+
+	echo "\n"REVERSE SORTED"\n" >> ../test/radix_sort_time.txt
+	../bin/radix_sort 10 < ../test/reverse/10_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100 < ../test/reverse/100_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200 < ../test/reverse/200_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000 < ../test/reverse/1000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000 < ../test/reverse/2000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100000 < ../test/reverse/100000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200000 < ../test/reverse/200000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000000 < ../test/reverse/1000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000000 < ../test/reverse/2000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 5000000 < ../test/reverse/5000000_ints >> ../test/radix_sort_time.txt
+
+	echo "\n"SORTED"\n" >> ../test/radix_sort_time.txt
+	../bin/radix_sort 10 < ../test/sorted/10_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100 < ../test/sorted/100_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200 < ../test/sorted/200_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000 < ../test/sorted/1000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000 < ../test/sorted/2000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 100000 < ../test/sorted/100000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 200000 < ../test/sorted/200000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 1000000 < ../test/sorted/1000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 2000000 < ../test/sorted/2000000_ints >> ../test/radix_sort_time.txt
+	../bin/radix_sort 5000000 < ../test/sorted/5000000_ints >> ../test/radix_sort_time.txt

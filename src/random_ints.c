@@ -5,11 +5,19 @@
 
 #include "small_func.h"
 
+// compare numbers in ascending order
 int compare_ints_asc(const void *a, const void *b);
+// compare numbers in descending order
 int compare_ints_desc(const void *a, const void *b);
 
 int main(int argc, char *argv[]) {
 
+   if (argc < 2) {
+      printf("Error! Missing an amount and a sort type.\n");
+      return 1;
+   }
+
+   // array length to be made is first command line argument
    int len = atoi(argv[1]);
    int i, *numbers = malloc(len * sizeof(int));
 
@@ -56,6 +64,7 @@ int main(int argc, char *argv[]) {
    }
 
    free(numbers);
+
    return 0;
 
 }

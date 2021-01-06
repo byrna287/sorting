@@ -4,9 +4,16 @@
 
 #include "small_func.h"
 
+// sorts an array by swapping the smallest number of the unsorted part with
+// the current number
 void selection_sort(int nums[], int len);
 
 int main(int argc, char *argv[]) {
+
+   if (argc < 2) {
+      printf("Error! Missing length that is to be sorted.\n");
+      return 1;
+   }
 
    // length of array is first command line argument
    int len = atoi(argv[1]);

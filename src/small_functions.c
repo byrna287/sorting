@@ -3,6 +3,8 @@
 
 #include "small_func.h"
 
+
+// prints an array followed by a new line
 void print_nums(int numbers[], int len) {
 
    int i;
@@ -12,6 +14,7 @@ void print_nums(int numbers[], int len) {
    printf("\n");
 }
 
+// swaps two values
 void swap(int *num1, int *num2) {
 
    int temp;
@@ -20,6 +23,7 @@ void swap(int *num1, int *num2) {
    *num2 = temp;
 }
 
+// returns the largest number in an array
 int max(int nums[], int len) {
 
    int i, largest = 0;

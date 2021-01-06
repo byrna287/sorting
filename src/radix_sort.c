@@ -3,13 +3,19 @@
 #include <math.h>
 #include <time.h>
 
-// WASN'T WORKING WITH PIPING DATA IN (THE NUMBERS WERE TOO BIG?? AND DOESN'T SORT NEGATIVE NUMBERS)
 #include "small_func.h"
 
+// sorts the numbers according to each digit that is passed to it
 void counting_sort(int nums[], int len, int dig);
+// calls counting_sort for each digit of the largest number to sort the array
 void radix_sort(int nums[], int len);
 
 int main(int argc, char *argv[]) {
+
+   if (argc < 2) {
+      printf("Error! Missing length that is to be sorted.\n");
+      return 1;
+   }
 
    // length of array is first command line argument
    int len = atoi(argv[1]);
@@ -64,7 +70,7 @@ void counting_sort(int nums[], int len, int dig) {
    }
 
    // build sorted list
-   for (i = len - 1; i >= 0; --i) { // had this going up from 0 and it didn't work
+   for (i = len - 1; i >= 0; --i) {
       // get to the digit you want
       ind = floor(nums[i] / dig);
       // -1 because index starts at 0

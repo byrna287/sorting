@@ -1,14 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <math.h>
+#include <time.h>
 
 #include "small_func.h"
 
+// makes a max heap - parent node always bigger than child node
 void make_max_heap(int nums[], int len, int i);
+// calls max heap to sort the array and swaps the largest number to the
+// end and calls it to sort again without that number
 void heap_sort(int nums[], int len);
 
 int main(int argc, char *argv[]) {
+
+   if (argc < 2) {
+      printf("Error! Missing length that is to be sorted.\n");
+      return 1;
+   }
 
    // length of array is first command line argument
    int len = atoi(argv[1]);
