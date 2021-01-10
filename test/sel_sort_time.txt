@@ -11,6 +11,9 @@ RANDOM
 2000 ints - time taken: 0.005821 seconds
 100000 ints - time taken: 9.593280 seconds
 200000 ints - time taken: 38.680106 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 PARTIALLY SORTED
 
@@ -21,6 +24,9 @@ PARTIALLY SORTED
 2000 ints - time taken: 0.005403 seconds
 100000 ints - time taken: 9.645864 seconds
 200000 ints - time taken: 39.930862 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 REVERSE SORTED
 
@@ -31,6 +37,9 @@ REVERSE SORTED
 2000 ints - time taken: 0.006317 seconds
 100000 ints - time taken: 12.058762 seconds
 200000 ints - time taken: 45.715704 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 SORTED
 
@@ -41,6 +50,9 @@ SORTED
 2000 ints - time taken: 0.005340 seconds
 100000 ints - time taken: 10.445533 seconds
 200000 ints - time taken: 42.146727 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 DATASET 2:
 
@@ -53,6 +65,9 @@ RANDOM
 2000 ints - time taken: 0.005741 seconds
 100000 ints - time taken: 9.468548 seconds
 200000 ints - time taken: 40.283100 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 PARTIALLY SORTED
 
@@ -63,6 +78,9 @@ PARTIALLY SORTED
 2000 ints - time taken: 0.004768 seconds
 100000 ints - time taken: 9.948739 seconds
 200000 ints - time taken: 40.239434 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 REVERSE SORTED
 
@@ -73,6 +91,9 @@ REVERSE SORTED
 2000 ints - time taken: 0.005095 seconds
 100000 ints - time taken: 11.968543 seconds
 200000 ints - time taken: 45.047934 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 SORTED
 
@@ -83,6 +104,9 @@ SORTED
 2000 ints - time taken: 0.005078 seconds
 100000 ints - time taken: 10.168499 seconds
 200000 ints - time taken: 40.631044 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 DATASET 3:
 
@@ -95,6 +119,9 @@ RANDOM
 2000 ints - time taken: 0.005470 seconds
 100000 ints - time taken: 9.085716 seconds
 200000 ints - time taken: 36.446478 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 PARTIALLY SORTED
 
@@ -105,6 +132,9 @@ PARTIALLY SORTED
 2000 ints - time taken: 0.004222 seconds
 100000 ints - time taken: 9.597291 seconds
 200000 ints - time taken: 39.345743 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 REVERSE SORTED
 
@@ -115,6 +145,9 @@ REVERSE SORTED
 2000 ints - time taken: 0.004634 seconds
 100000 ints - time taken: 12.094738 seconds
 200000 ints - time taken: 45.318586 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
 
 SORTED
 
@@ -125,3 +158,6 @@ SORTED
 2000 ints - time taken: 0.004674 seconds
 100000 ints - time taken: 10.256154 seconds
 200000 ints - time taken: 40.718242 seconds
+1000000 ints - time taken: too long
+2000000 ints - time taken: too long
+5000000 ints - time taken: too long
