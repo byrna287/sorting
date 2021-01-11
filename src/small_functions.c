@@ -3,7 +3,6 @@
 
 #include "small_func.h"
 
-
 // prints an array followed by a new line
 void print_nums(int numbers[], int len) {
 

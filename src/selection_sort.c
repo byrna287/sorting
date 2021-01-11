@@ -10,6 +10,7 @@ void selection_sort(int nums[], int len);
 
 int main(int argc, char *argv[]) {
 
+   // need to include length of array to be sorted
    if (argc < 2) {
       printf("Error! Missing length that is to be sorted.\n");
       return 1;

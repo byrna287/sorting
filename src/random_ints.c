@@ -12,9 +12,10 @@ int compare_ints_desc(const void *a, const void *b);
 
 int main(int argc, char *argv[]) {
 
-   if (argc < 2) {
-      printf("Error! Missing an amount and a sort type.\n");
-      return 1;
+   // need to include an amount and a sort type for the numbers
+   if (argc < 3) {
+      printf("Error! Missing an amount and/or a sort type.\n");
+      return 0;
    }
 
    // array length to be made is first command line argument
