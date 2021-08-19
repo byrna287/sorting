@@ -1,4 +1,4 @@
-# CA284 Systems Programming
+# Systems Programming
 
 ## Introduction
 
