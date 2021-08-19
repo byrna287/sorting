@@ -1,4 +1,4 @@
-# CA284 Systems Programming
+# Systems Programming
 
 ## Introduction
 This directory contains _all your source code_.  Here you should have:
